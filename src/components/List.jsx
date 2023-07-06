@@ -4,6 +4,7 @@ import { Store } from "../context/Store";
 
 const List = () => {
   const  {todos,deleteRecord} = useContext(Store);
+  console.log(todos);
   return (
     <>
       <div className="todo-list-container">
@@ -11,7 +12,7 @@ const List = () => {
             {
                 todos.length > 0 ? todos.map((values,index)=>(
                  <div className="d-flex" key={index}>
-                    <h1>{values}</h1>
+                    <h3>{values}</h3>
                     <button onClick={() => deleteRecord(values)}>Delete</button>
                     </div>
                 )): <h1>No Records founds</h1>

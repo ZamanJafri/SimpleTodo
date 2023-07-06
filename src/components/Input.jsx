@@ -9,7 +9,7 @@ const Input = () => {
   const submitData = (e) => {
     e.preventDefault();
     if (data.length > 0) {
-      addRecord(data);
+        addRecord(data);
       setData("");
     } else {
       setErr(true);
